@@ -13,7 +13,7 @@ void astar(string source, string destination)
         fcost[x.first] = INT_MAX;
     }
     gcost[source] = 0;
-    fcost[source] = huristic[source];
+    fcost[source] = huristic[source] + gcost[source];
     set<pair<int, string>> s;
     s.insert({fcost[source], source});
     while (!s.empty())
