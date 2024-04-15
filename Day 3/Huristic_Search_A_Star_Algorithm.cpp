@@ -1,11 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-unordered_map<string, int> huristic;                    // straight line cost of each node from source to destination
+#define umpsi unordered_map<string, int>
+
+umpsi huristic;                    // straight line cost of each node from source to destination
 unordered_map<string, vector<pair<string, int>>> graph; // graph representation
 void astar(string source, string destination)
 {
-    unordered_map<string, int> gcost;
-    unordered_map<string, int> fcost;
+    umpsi gcost;
+    umpsi fcost;
     unordered_map<string, string> parent;
     for (auto x : huristic)
     {
